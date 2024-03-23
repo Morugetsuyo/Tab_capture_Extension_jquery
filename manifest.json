@@ -1,0 +1,38 @@
+  {
+    "manifest_version": 3,
+    "name": "Tab Capture Extension",
+    "version": "2.0",
+    "description": "Capture the current tab as an image.",
+    "permissions": ["activeTab", "tabs", "storage", "downloads", "contextMenus"],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "icons/icons.png",
+        "48": "icons/icons.png",
+        "128": "icons/icons.png"
+      }
+    },
+    "background": {
+      "service_worker": "js/background.js"
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+          "js": ["js/jquery-3.7.1.min.js", "js/snipping.js"],
+          "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["js/*", "popup/*"],
+        "matches": ["<all_urls>"],
+        "use_dynamic_url": true
+      }
+    ],
+    "icons": {
+      "16": "icons/icons.png",
+      "48": "icons/icons.png",
+      "128": "icons/icons.png"
+    }
+  }
+  

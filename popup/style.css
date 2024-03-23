@@ -1,0 +1,19 @@
+body, html {
+    width: 200px;
+    height: 100px;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
