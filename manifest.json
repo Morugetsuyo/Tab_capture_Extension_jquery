@@ -1,7 +1,7 @@
   {
     "manifest_version": 3,
     "name": "Tab Capture Extension",
-    "version": "2.0",
+    "version": "2.1",
     "description": "Capture the current tab as an image.",
     "permissions": ["activeTab", "tabs", "storage", "downloads", "contextMenus"],
     "action": {
